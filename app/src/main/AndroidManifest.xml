@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.assigment">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,22 +12,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assigment">
         <activity
-            android:name=".splashscreen.aftersplashscreen"
-            android:exported="false" />
-        <activity
-            android:name=".splashscreen.Splashscreen"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Assigment.NoActionBar">
+            android:name=".DMAS.DMASActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".betweentwono.SecondNoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".betweentwono.FirstNoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Revercenumber.Revercenumber"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ByIntent.CallSMSMailShareActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recycleview.EmpShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sumnumber.SumDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sumnumber.SumNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Lifecycle.LifeCycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen.aftersplashscreen"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen.Splashscreen"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Assigment.NoActionBar" />
     </application>
 
 </manifest>

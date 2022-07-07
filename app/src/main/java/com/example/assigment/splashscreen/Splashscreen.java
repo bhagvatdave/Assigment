@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
 
 import com.example.assigment.R;
 import com.example.assigment.databinding.ActivitySplashscreenBinding;
@@ -16,11 +17,13 @@ private ActivitySplashscreenBinding sbinding;
         super.onCreate(savedInstanceState);
         sbinding=ActivitySplashscreenBinding.inflate(getLayoutInflater());
         setContentView(sbinding.getRoot());
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(Splashscreen.this, aftersplashscreen.class);
-            }
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(Splashscreen.this, aftersplashscreen.class);
+            startActivity(i);
+            finish();
         },2000);
     }
 }
