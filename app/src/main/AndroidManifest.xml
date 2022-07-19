@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.assigment">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -12,8 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assigment">
         <activity
+            android:name=".ShowPDF"
+            android:exported="false" />
+        <activity
+            android:name=".TV_visibility"
+            android:exported="false" />
+        <activity
+            android:name=".Webview"
+            android:exported="false" />
+        <activity
+            android:name=".RegLogFragActivity"
+            android:exported="false" />
+        <activity
             android:name=".DMAS.DMASActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +41,7 @@
             android:exported="false" />
         <activity
             android:name=".Revercenumber.Revercenumber"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ByIntent.CallSMSMailShareActivity"
             android:exported="true" />

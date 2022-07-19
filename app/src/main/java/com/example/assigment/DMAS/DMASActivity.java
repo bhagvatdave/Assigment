@@ -54,7 +54,6 @@ if (!binding.textinput1.getText().toString().equals("") || !binding.textinput2.g
     @Override
     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
         RadioButton RBtn = findViewById(binding.RBgroup.getCheckedRadioButtonId());
-        if (!binding.textinput1.getText().toString().equals("") || !binding.textinput2.getText().toString().equals("")){
             if (RBtn.getText().equals("Division") && !binding.textinput2.getText().toString().equals("")){
                 operations(RBtn.getText().toString(),binding.textinput1.getText().toString(),binding.textinput2.getText().toString());
             }else{
@@ -62,7 +61,6 @@ if (!binding.textinput1.getText().toString().equals("") || !binding.textinput2.g
                 binding.textinput1.setText("");
                 binding.textinput2.setText("");
             }
-        }
     }
 
     @Override
